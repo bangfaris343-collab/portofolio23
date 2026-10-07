@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- ============ SEO & META ============ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fariz — Web Developer | Portfolio</title>
+  <meta name="description" content="Portfolio personal Fariz, Web Developer. Spesialis HTML, CSS, JavaScript, Node.js, dan MySQL. Lihat selected work: portfolio, AI camera, dan game store." />
+  <meta name="keywords" content="portfolio, web developer, HTML, CSS, JavaScript, Node.js, MySQL, Indonesia" />
+  <meta name="author" content="Fariz" />
+  <meta name="theme-color" content="#FBFBF9" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fariz — Web Developer" />
+  <meta property="og:description" content="Sakamoto Days × manga × modern developer portfolio. Selected work, skills, dan kontak." />
+  <meta property="og:image" content="assets/images/og-cover.png" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23141414'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-size='30' font-weight='900' fill='white' text-anchor='middle'%3EF%3C/text%3E%3Crect x='0' y='52' width='64' height='6' fill='%23D90429'/%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= SAKAMOTO BACKGROUND ANIMATION =================
+       Scene dipindahkan menjadi latar belakang tetap oleh script.js.
+       Animasi berada di belakang konten dan tidak menangkap klik.
+       Layer (bawah -> atas):
+         .opening-bg -> .opening-panels -> .opening-characters
+         -> .opening-typography -> .opening-overlay
+       Urutan (staggered, easing premium):
+         panel C1 0ms / body C1 80ms       <- chara7 (Nagumo)
+         panel C3 180ms / body 260ms       <- chara4 (Aoi & Hana)
+         panel C2 360ms / body 440ms       <- chara6 (Heisuke)
+         CHAR 4 540ms / body 620ms         <- chara3 (Lu)
+         CHAR 5 720ms / body 800ms         <- chara2 (Shin)
+         SAKAMOTO panel 900ms / body 1050ms <- chara1 (focal)
+       Animasi selesai lalu komposisi tetap menjadi latar.
+       Portrait = PNG yang SAMA (crop/duotone/mask via CSS),
+       artwork original tidak diubah. -->
+  <div
+    class="opening-screen"
+    id="openingScreen"
+    aria-hidden="true"
+  >
+    <div
+      class="opening-bg"
+      aria-hidden="true"
+    >
+      <span
+        class="op-kanji"
+        lang="ja"
+      >
+        開始
+      </span>
+
+      <span class="op-vignette"></span>
+      <span class="op-grain"></span>
+    </div>
+
+    <div
+      class="opening-panels"
+      aria-hidden="true"
+    >
+
+      <div
+        class="opening-character-panel op-p1"
+        style="--acc:#C9BFA8"
+      >
+        <img
+          class="op-portrait"
+          src="assets/sakamoto/chara7_main1.png"
+          alt=""
+          draggable="false"
+        />
+
+        <span class="op-geo op-geo--a"></span>
+        <span class="op-geo op-geo--b"></span>
+        <span class="op-jp" lang="ja">南雲</span>
+        <span class="op-idx">02</span>
+        <span class="op-latin">Nagumo</span>
+        <span class="op-desc">The Order</span>
+        <span class="op-rule"></span>
+        <span class="op-meta">Character archive — File 02</span>
+
+        <span
+          class="op-k"
+          lang="ja"
+        >
+          一
+        </span>
+      </div>
+
+      <div
+        class="opening-character-panel op-p2"
+        style="--acc:#3FA34D"
+      >
+        <img
+          class="op-portrait"
+          src="assets/sakamoto/chara6_main1.png"
+          alt=""
+          draggable="false"
+        />
+
+        <span class="op-geo op-geo--a"></span>
+        <span class="op-geo op-geo--b"></span>
+        <span class="op-jp" lang="ja">平助</span>
+        <span class="op-idx">03</span>
+        <span class="op-latin">Heisuke</span>
+        <span class="op-desc">Sniper</span>
+        <span class="op-rule"></span>
+        <span class="op-meta">Character archive — File 03</span>
+
+        <span
+          class="op-k"
+          lang="ja"
+        >
+          二
+        </span>
+      </div>
+
+      <div
+        class="opening-character-panel op-p3"
+        style="--acc:#C90016"
+      >
+        <img
+          class="op-portrait"
+          src="assets/sakamoto/chara4_main1.png"
+          alt=""
+          draggable="false"
+        />
+
+        <span class="op-geo op-geo--a"></span>
+        <span class="op-geo op-geo--b"></span>
+        <span class="op-jp" lang="ja">坂本家</span>
+        <span class="op-idx">04</span>
+        <span class="op-latin">Aoi &amp; Hana</span>
+        <span class="op-desc">The Family</span>
+        <span class="op-rule"></span>
+        <span class="op-meta">Character archive — File 04</span>
+
+        <span
+          class="op-k"
+          lang="ja"
+        >
+          三
+        </span>
+      </div>
+
+      <div
+        class="opening-character-panel op-p4"
+        style="--acc:#E87AA0"
+      >
+        <img
+          class="op-portrait"
+          src="assets/sakamoto/chara3_main1.png"
+          alt=""
+          draggable="false"
+        />
+
+        <span class="op-geo op-geo--a"></span>
+        <span class="op-geo op-geo--b"></span>
+        <span class="op-jp" lang="ja">陸少糖</span>
+        <span class="op-idx">05</span>
+        <span class="op-latin">Lu</span>
+        <span class="op-desc">Martial Artist</span>
+        <span class="op-rule"></span>
+        <span class="op-meta">Character archive — File 05</span>
+
+        <span
+          class="op-k"
+          lang="ja"
+        >
+          四
+        </span>
+      </div>
+
+      <div
+        class="opening-character-panel op-p5"
+        style="--acc:#3B7DDD"
+      >
+        <img
+          class="op-portrait"
+          src="assets/sakamoto/chara2_main1.png"
+          alt=""
+          draggable="false"
+        />
+
+        <span class="op-geo op-geo--a"></span>
+        <span class="op-geo op-geo--b"></span>
+        <span class="op-jp" lang="ja">朝倉</span>
+        <span class="op-idx">06</span>
+        <span class="op-latin">Shin</span>
+        <span class="op-desc">Esper</span>
+        <span class="op-rule"></span>
+        <span class="op-meta">Character archive — File 06</span>
+
+        <span
+          class="op-k"
+          lang="ja"
+        >
+          五
+        </span>
+      </div>
+
+      <div
+        class="opening-character-panel op-saka"
+        style="--acc:#F5C518"
+      >
+        <img
+          class="op-portrait op-portrait--saka"
+          src="assets/sakamoto/chara1_main2.png"
+          alt=""
+          draggable="false"
+        />
+
+        <span class="op-geo op-geo--a"></span>
+        <span class="op-geo op-geo--b"></span>
+        <span class="op-jp op-jp--giant" lang="ja">坂本</span>
+        <span class="op-idx">01</span>
+        <span class="op-latin">Sakamoto</span>
+        <span class="op-desc">The Former Legend</span>
+        <span class="op-rule"></span>
+        <span class="op-meta">Character archive — File 01</span>
+
+        <span
+          class="op-k"
+          lang="ja"
+        >
+          主
+        </span>
+      </div>
+
+    </div>
+
+    <div
+      class="opening-characters"
+      aria-hidden="true"
+    >
+
+      <div class="ochar-cell ochar--c1">
+        <img
+          class="ochar"
+          src="assets/sakamoto/chara7_main1.png"
+          alt=""
+          draggable="false"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="ochar-cell ochar--c2">
+        <img
+          class="ochar"
+          src="assets/sakamoto/chara6_main1.png"
+          alt=""
+          draggable="false"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="ochar-cell ochar--c3">
+        <img
+          class="ochar"
+          src="assets/sakamoto/chara4_main1.png"
+          alt=""
+          draggable="false"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="ochar-cell ochar--c4">
+        <img
+          class="ochar"
+          src="assets/sakamoto/chara3_main1.png"
+          alt=""
+          draggable="false"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="ochar-cell ochar--c5">
+        <img
+          class="ochar"
+          src="assets/sakamoto/chara2_main1.png"
+          alt=""
+          draggable="false"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="ochar-cell ochar--saka">
+        <img
+          class="ochar"
+          src="assets/sakamoto/chara1_main2.png"
+          alt=""
+          draggable="false"
+          fetchpriority="high"
+        />
+
+        <span class="op-saka-tag">
+          Sakamoto
+        </span>
+      </div>
+
+    </div>
+
+    <div class="opening-typography">
+      <p class="op-kicker">
+        Fariz.dev — Portfolio
+      </p>
+
+      <h2 class="op-title">
+        Mission
+        <span>
+          Start
+        </span>
+      </h2>
+
+      <p class="op-sub">
+        HTML · CSS · JavaScript
+      </p>
+
+    </div>
+
+    <div
+      class="opening-overlay"
+      aria-hidden="true"
+    ></div>
+
+  </div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- Scroll progress -->
+  <div
+    class="scroll-progress"
+    id="scrollProgress"
+    aria-hidden="true"
+  ></div>
+
+  <!-- =========================================================
+       ANIMATED BACKGROUND
+       5 layer:
+       01. Base
+       02. Manga pattern
+       03. Halftone
+       04. Speed lines
+       05. Decorative shapes
+
+       Gerakan continuous dikontrol oleh script.js.
+       Scroll + mouse menjadi tambahan parallax.
+       ========================================================= -->
+  <div
+    class="bg-scene"
+    id="bgScene"
+    aria-hidden="true"
+  >
+
+    <!-- Layer 01 — base paper -->
+    <div class="bg-layer bg-base"></div>
+
+    <!-- Layer 02 — manga pattern -->
+    <div
+      class="bg-layer bg-pattern"
+      data-depth="0.08"
+    ></div>
+
+    <!-- Layer 03 — halftone -->
+    <div
+      class="bg-layer bg-halftone"
+      data-depth="-0.05"
+    ></div>
+
+    <!-- Layer 04 — action / speed lines -->
+    <div
+      class="bg-layer bg-speed"
+      data-depth="0.15"
+    ></div>
+
+    <!-- Layer 05 — decorative shapes -->
+    <div
+      class="bg-layer bg-deco"
+      data-depth="0.25"
+    >
+      <span class="deco-slash"></span>
+      <span class="deco-sq"></span>
+      <span class="deco-ring"></span>
+    </div>
+
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header
+    class="navbar"
+    id="navbar"
+  >
+    <nav
+      class="nav-inner"
+      aria-label="Navigasi utama"
+    >
+
+      <a
+        href="#home"
+        class="logo"
+        aria-label="Beranda portfolio Fariz"
+      >
+        <span class="logo-mark">F</span>
+
+        <span class="logo-text">
+          fariz<span class="logo-dot">.</span>dev
+        </span>
+
+        <span
+          class="logo-jp"
+          lang="ja"
+        >
+          開発者
+        </span>
+      </a>
+
+      <ul
+        class="nav-links"
+        id="navLinks"
+      >
+        <li>
+          <a
+            href="#home"
+            class="nav-link active"
+            data-nav="home"
+          >
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#about"
+            class="nav-link"
+            data-nav="about"
+          >
+            About
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#skills"
+            class="nav-link"
+            data-nav="skills"
+          >
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#projects"
+            class="nav-link"
+            data-nav="projects"
+          >
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a
+          href="#experience"
+          class="nav-link"
+          data-nav="experience"
+          >
+            Journey
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#contact"
+            class="nav-link"
+            data-nav="contact"
+          >
+            Contact
+          </a>
+        </li>
+
+        <li class="nav-cta-mobile">
+          <a
+            href="#contact"
+            class="btn btn-primary"
+          >
+            Let's Talk
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+
+        <a
+          href="#contact"
+          class="btn btn-primary btn-sm nav-cta-desktop"
+        >
+          Let's Talk
+        </a>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Buka menu navigasi"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+
+    <section
+      class="hero"
+      id="home"
+      aria-labelledby="hero-title"
+    >
+
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+
+          <p class="hero-kicker reveal">
+            <span
+              class="kicker-dot"
+              aria-hidden="true"
+            ></span>
+
+            Portfolio —
+            <span id="heroYear">2026</span>
+
+            <span
+              class="hero-jp"
+              lang="ja"
+            >
+              開発者
+            </span>
+          </p>
+
+          <h1
+            class="hero-title"
+            id="hero-title"
+          >
+
+            <span class="hero-line reveal">
+              Web
+            </span>
+
+            <span
+              class="hero-line hero-line--outline reveal"
+              data-delay="1"
+            >
+              Developer
+            </span>
+
+          </h1>
+
+          <p
+            class="hero-name-line reveal"
+            data-delay="2"
+          >
+            I'm
+            <strong>Fariz</strong>
+            <span lang="ja">
+              — ファリズ
+            </span>
+          </p>
+
+          <p
+            class="hero-desc reveal"
+            data-delay="3"
+          >
+            I build fast, clean web apps —
+            from game catalogs to AI cameras —
+            with
+            <strong>
+              vanilla HTML, CSS, and JavaScript
+            </strong>.
+            No bloat, just code that works.
+          </p>
+
+          <div
+            class="hero-buttons reveal"
+            data-delay="4"
+          >
+            <a
+              href="#projects"
+              class="btn btn-primary btn-lg"
+            >
+              View Projects
+            </a>
+
+            <a
+              href="#contact"
+              class="btn btn-ghost btn-lg"
+            >
+              Contact Me
+            </a>
+          </div>
+
+          <p
+            class="hero-status reveal"
+            data-delay="5"
+          >
+            <span
+              class="status-dot"
+              aria-hidden="true"
+            ></span>
+
+            Open for projects
+          </p>
+
+        </div>
+
+        <!-- HERO VISUAL -->
+
+        <div
+          class="hero-visual reveal reveal--right"
+          data-delay="2"
+          id="heroVisual"
+        >
+
+          <figure class="hero-art">
+
+            <div
+              class="panel-halftone"
+              aria-hidden="true"
+            ></div>
+
+            <svg
+              class="art-speed"
+              viewBox="0 0 120 60"
+              aria-hidden="true"
+            >
+              <line
+                x1="6"
+                y1="18"
+                x2="80"
+                y2="18"
+                class="speed-line"
+              />
+
+              <line
+                x1="24"
+                y1="40"
+                x2="110"
+                y2="40"
+                class="speed-line speed-line--2"
+              />
+            </svg>
+
+            <span class="panel-tag">
+              File — 001
+            </span>
+
+            <span
+              class="tape tape--tl"
+              aria-hidden="true"
+            ></span>
+
+            <span
+              class="tape tape--br"
+              aria-hidden="true"
+            ></span>
+
+            <img
+              class="hero-photo"
+              src="assets/sakamoto/sakamoto.png"
+              alt="Karakter utama portfolio bergaya Sakamoto Days"
+              onerror="this.remove()"
+            />
+
+            <svg
+              class="hero-silhouette"
+              viewBox="0 0 200 250"
+              aria-hidden="true"
+            >
+              <ellipse
+                cx="100"
+                cy="238"
+                rx="58"
+                ry="8"
+                fill="#141414"
+                opacity=".12"
+              />
+
+              <path
+                d="M30 250 L40 172 Q44 152 66 146 L134 146 Q156 152 160 172 L170 250 Z"
+                fill="#141414"
+              />
+
+              <path
+                d="M84 146 L100 178 L116 146 Z"
+                fill="#FFFFFF"
+              />
+
+              <path
+                d="M58 132 Q100 152 152 138 L148 162 Q100 176 60 158 Z"
+                fill="#D90429"
+              />
+
+              <circle
+                cx="100"
+                cy="96"
+                r="2"
+                fill="#141414"
+              />
+
+              <circle
+                cx="100"
+                cy="84"
+                r="30"
+                fill="#FFFFFF"
+                stroke="#141414"
+                stroke-width="4"
+              />
+
+              <path
+                d="M70 82 Q70 50 100 50 Q130 50 130 82 L126 82 Q124 62 112 62 L110 70 L102 60 L94 70 L86 60 Q74 62 74 82 Z"
+                fill="#141414"
+              />
+
+              <path
+                d="M68 78 Q70 44 100 44 Q130 44 132 78"
+                fill="none"
+                stroke="#141414"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+
+              <rect
+                x="60"
+                y="72"
+                width="12"
+                height="24"
+                rx="5"
+                fill="#141414"
+              />
+
+              <rect
+                x="128"
+                y="72"
+                width="12"
+                height="24"
+                rx="5"
+                fill="#141414"
+              />
+
+              <path
+                d="M134 92 Q146 104 142 118"
+                fill="none"
+                stroke="#141414"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M84 84 L96 88 M116 84 L104 88"
+                stroke="#141414"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+
+              <circle
+                cx="90"
+                cy="92"
+                r="2.4"
+                fill="#141414"
+              />
+
+              <circle
+                cx="110"
+                cy="92"
+                r="2.4"
+                fill="#141414"
+              />
+
+              <path
+                d="M93 104 L107 104"
+                stroke="#141414"
+                stroke-width="2.6"
+                stroke-linecap="round"
+              />
+            </svg>
+
+            <figcaption
+              class="panel-caption"
+              aria-hidden="true"
+            >
+              <span lang="ja">
+                作戦開始
+              </span>
+
+              <span>
+                <em>—</em>
+                mission start
+              </span>
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= TICKER ================= -->
+
+    <div
+      class="ticker"
+      aria-hidden="true"
+    >
+      <div class="ticker-track">
+
+        <span>
+          HTML ◆ CSS ◆ JavaScript ◆ Node.js ◆ PHP ◆ MySQL ◆ Git ◆ GitHub ◆&nbsp;
+        </span>
+
+        <span>
+          HTML ◆ CSS ◆ JavaScript ◆ Node.js ◆ PHP ◆ MySQL ◆ Git ◆ GitHub ◆&nbsp;
+        </span>
+
+      </div>
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+      class="section about"
+      id="about"
+      aria-labelledby="about-title"
+    >
+
+      <div class="container about-grid">
+
+        <div class="about-photo reveal reveal--left">
+
+          <div class="photo-frame">
+
+            <div
+              class="photo-avatar"
+              role="img"
+              aria-label="Stempel dan potret ilustrasi Fariz"
+            >
+
+              <div
+                class="avatar-halftone"
+                aria-hidden="true"
+              ></div>
+
+              <span
+                class="hanko"
+                aria-hidden="true"
+              >
+                F
+              </span>
+
+              <span
+                class="avatar-caption"
+                lang="ja"
+                aria-hidden="true"
+              >
+                ファリズ
+              </span>
+
+            </div>
+
+            <span
+              class="photo-badge"
+              lang="ja"
+            >
+              よろしく
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="about-copy">
+
+          <p class="section-eyebrow reveal">
+            <span class="eb-num">
+              01
+            </span>
+
+            About
+
+            <span lang="ja">
+              自己紹介
+            </span>
+          </p>
+
+          <h2
+            class="section-title reveal"
+            id="about-title"
+          >
+            Behind the code<span class="accent">.</span>
+          </h2>
+
+          <p class="section-desc reveal">
+            Saya
+            <strong>Fariz</strong>
+            — pelajar yang berkembang menjadi
+            <strong>web developer</strong>.
+            Fokus saya: frontend yang cepat dan bersih dengan
+            <strong>HTML, CSS, JavaScript</strong>,
+            sambil mendalami sisi server dengan
+            <strong>Node.js, PHP, dan MySQL</strong>.
+          </p>
+
+          <dl
+            class="dossier reveal"
+            data-delay="1"
+          >
+            <div>
+              <dt>Base</dt>
+              <dd>
+                Indonesia · Remote OK
+              </dd>
+            </div>
+
+            <div>
+              <dt>Now</dt>
+              <dd>
+                Full-stack learning path
+              </dd>
+            </div>
+
+            <div>
+              <dt>Built</dt>
+              <dd>
+                Game store · AI camera · Portfolio
+              </dd>
+            </div>
+
+            <div>
+              <dt>Next</dt>
+              <dd>
+                REST API + database design
+              </dd>
+            </div>
+          </dl>
+
+          <div class="stat-row">
+
+            <div class="stat-card reveal">
+              <strong>10+</strong>
+              <span>Projects Built</span>
+            </div>
+
+            <div
+              class="stat-card reveal"
+              data-delay="1"
+            >
+              <strong>8</strong>
+              <span>Technologies</span>
+            </div>
+
+            <div
+              class="stat-card reveal"
+              data-delay="2"
+            >
+              <strong>3+</strong>
+              <span>Years Learning</span>
+            </div>
+
+          </div>
+
+          <div class="about-buttons reveal">
+
+            <a
+              href="assets/Fariz-CV.pdf"
+              class="btn btn-primary"
+              download
+            >
+              Download CV
+            </a>
+
+            <a
+              href="#contact"
+              class="btn btn-outline"
+            >
+              Let's Connect
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section
+      class="section skills"
+      id="skills"
+      aria-labelledby="skills-title"
+    >
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <p class="section-eyebrow reveal">
+
+            <span class="eb-num">
+              02
+            </span>
+
+            Skills
+
+            <span lang="ja">
+              技術
+            </span>
+
+          </p>
+
+          <h2
+            class="section-title reveal"
+            id="skills-title"
+          >
+            What I work with<span class="accent">.</span>
+          </h2>
+
+          <p class="section-desc reveal">
+            Core = dipakai tiap project.
+            Learning = sedang didalami.
+            Tanpa klaim berlebihan.
+          </p>
+
+        </div>
+
+        <ul class="arsenal">
+
+          <li class="arsenal-row reveal">
+            <span class="ars-index">01</span>
+            <span class="ars-name">HTML</span>
+            <span class="ars-meta">Structure</span>
+            <span class="ars-tag ars-tag--core">Core</span>
+          </li>
+
+          <li
+            class="arsenal-row reveal"
+            data-delay="1"
+          >
+            <span class="ars-index">02</span>
+            <span class="ars-name">CSS</span>
+            <span class="ars-meta">
+              Styling · Responsive
+            </span>
+            <span class="ars-tag ars-tag--core">
+              Core
+            </span>
+          </li>
+
+          <li
+            class="arsenal-row reveal"
+            data-delay="2"
+          >
+            <span class="ars-index">03</span>
+            <span class="ars-name">JavaScript</span>
+            <span class="ars-meta">
+              Interaction · DOM · Fetch
+            </span>
+            <span class="ars-tag ars-tag--core">
+              Core
+            </span>
+          </li>
+
+          <li class="arsenal-row reveal">
+            <span class="ars-index">04</span>
+            <span class="ars-name">Node.js</span>
+            <span class="ars-meta">
+              Server · REST API
+            </span>
+            <span class="ars-tag ars-tag--core">
+              Core
+            </span>
+          </li>
+
+          <li
+            class="arsenal-row reveal"
+            data-delay="1"
+          >
+            <span class="ars-index">05</span>
+            <span class="ars-name">Git</span>
+            <span class="ars-meta">
+              Versioning
+            </span>
+            <span class="ars-tag ars-tag--core">
+              Core
+            </span>
+          </li>
+
+          <li
+            class="arsenal-row reveal"
+            data-delay="2"
+          >
+            <span class="ars-index">06</span>
+            <span class="ars-name">GitHub</span>
+            <span class="ars-meta">
+              Hosting
+            </span>
+            <span class="ars-tag ars-tag--core">
+              Core
+            </span>
+          </li>
+
+          <li class="arsenal-row reveal">
+            <span class="ars-index">07</span>
+            <span class="ars-name">PHP</span>
+            <span class="ars-meta">
+              Server language
+            </span>
+            <span class="ars-tag">
+              Learning
+            </span>
+          </li>
+
+          <li
+            class="arsenal-row reveal"
+            data-delay="1"
+          >
+            <span class="ars-index">08</span>
+            <span class="ars-name">MySQL</span>
+            <span class="ars-meta">
+              Database
+            </span>
+            <span class="ars-tag">
+              Learning
+            </span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section
+      class="section projects"
+      id="projects"
+      aria-labelledby="projects-title"
+    >
+
+      <div class="container">
+
+        <div class="section-head section-head--split">
+
+          <div>
+
+            <p class="section-eyebrow reveal">
+              <span class="eb-num">
+                03
+              </span>
+
+              Selected Work
+
+              <span lang="ja">
+                作品
+              </span>
+            </p>
+
+            <h2
+              class="section-title reveal"
+              id="projects-title"
+            >
+              Field records<span class="accent">.</span>
+            </h2>
+
+            <p class="section-desc reveal">
+              Tiga misi utama.
+              Klik panel untuk membuka dossier lengkap.
+            </p>
+
+          </div>
+
+          <div
+            class="filter-bar reveal"
+            role="group"
+            aria-label="Filter project berdasarkan kategori"
+          >
+
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+
+            <button
+              class="filter-btn"
+              data-filter="web"
+              aria-pressed="false"
+            >
+              Web
+            </button>
+
+            <button
+              class="filter-btn"
+              data-filter="app"
+              aria-pressed="false"
+            >
+              App
+            </button>
+
+          </div>
+
+        </div>
+
+        <div
+          class="project-grid"
+          id="projectGrid"
+        >
+          <!-- Project cards di-render oleh script.js -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= JOURNEY ================= -->
+
+    <section
+      class="section journey"
+      id="experience"
+      aria-labelledby="journey-title"
+    >
+
+      <div class="container">
+
+        <p class="section-eyebrow reveal">
+          <span class="eb-num">
+            04
+          </span>
+
+          Journey
+
+          <span lang="ja">
+            経歴
+          </span>
+        </p>
+
+        <h2
+          class="section-title reveal"
+          id="journey-title"
+        >
+          Training arc<span class="accent">.</span>
+        </h2>
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+
+            <span
+              class="timeline-dot"
+              aria-hidden="true"
+            ></span>
+
+            <div class="timeline-card">
+
+              <span class="timeline-date">
+                Sekarang
+              </span>
+
+              <h3>
+                Belajar Full-Stack Web Development
+              </h3>
+
+              <p>
+                Menggabungkan frontend + backend + database:
+                JavaScript di kedua sisi, Node.js REST API,
+                dan MySQL.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article
+            class="timeline-item reveal"
+            data-delay="1"
+          >
+
+            <span
+              class="timeline-dot"
+              aria-hidden="true"
+            ></span>
+
+            <div class="timeline-card">
+
+              <span class="timeline-date">
+                Sebelumnya
+              </span>
+
+              <h3>
+                Game Store + AI Camera Experiments
+              </h3>
+
+              <p>
+                Katalog game dengan search, filter,
+                wishlist, dan LocalStorage.
+                Eksperimen kamera:
+                hand tracking + blur real-time.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article
+            class="timeline-item reveal"
+            data-delay="2"
+          >
+
+            <span
+              class="timeline-dot"
+              aria-hidden="true"
+            ></span>
+
+            <div class="timeline-card">
+
+              <span class="timeline-date">
+                Awal
+              </span>
+
+              <h3>
+                HTML → CSS → JavaScript
+              </h3>
+
+              <p>
+                Mulai dari website sederhana,
+                lalu website interaktif:
+                DOM, events, dan multi-section
+                responsive layout.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <div
+      class="rule"
+      aria-hidden="true"
+    >
+      <i></i>
+    </div>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+      class="section contact"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
+
+      <div class="container contact-narrow">
+
+        <p
+          class="section-eyebrow reveal section-eyebrow--center"
+        >
+          <span class="eb-num">
+            05
+          </span>
+
+          Contact
+
+          <span lang="ja">
+            連絡
+          </span>
+        </p>
+
+        <h2
+          class="section-title reveal"
+          id="contact-title"
+        >
+          Let's work together<span class="accent">.</span>
+        </h2>
+
+        <p class="section-desc reveal">
+          Satu pesan cukup untuk memulai.
+          Pilih jalur tercepat di bawah,
+          atau kirim form.
+        </p>
+
+        <div class="direct-links reveal">
+
+          <a
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp
+          </a>
+
+          <a href="mailto:halo@fariz.dev">
+            Email
+          </a>
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+        <form
+          class="contact-form reveal"
+          id="contactForm"
+          data-delay="1"
+          novalidate
+        >
+
+          <div class="form-row">
+
+            <div class="form-field">
+
+              <label for="fName">
+                Nama
+              </label>
+
+              <input
+                type="text"
+                id="fName"
+                name="name"
+                placeholder="Nama kamu"
+                autocomplete="name"
+                required
+              />
+
+              <small
+                class="form-error"
+                data-error="fName"
+              ></small>
+
+            </div>
+
+            <div class="form-field">
+
+              <label for="fEmail">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="fEmail"
+                name="email"
+                placeholder="nama@email.com"
+                autocomplete="email"
+                required
+              />
+
+              <small
+                class="form-error"
+                data-error="fEmail"
+              ></small>
+
+            </div>
+
+          </div>
+
+          <div class="form-field">
+
+            <label for="fSubject">
+              Subject
+            </label>
+
+            <input
+              type="text"
+              id="fSubject"
+              name="subject"
+              placeholder="Contoh: Kolaborasi project katalog"
+              required
+            />
+
+            <small
+              class="form-error"
+              data-error="fSubject"
+            ></small>
+
+          </div>
+
+          <div class="form-field">
+
+            <label for="fMessage">
+              Pesan
+            </label>
+
+            <textarea
+              id="fMessage"
+              name="message"
+              rows="5"
+              placeholder="Ceritakan kebutuhan project kamu…"
+              required
+            ></textarea>
+
+            <small
+              class="form-error"
+              data-error="fMessage"
+            ></small>
+
+          </div>
+
+          <p
+            class="form-success"
+            id="formSuccess"
+            role="status"
+            hidden
+          >
+            Message ready to send!
+            Membuka WhatsApp…
+          </p>
+
+          <button
+            type="submit"
+            class="btn btn-primary btn-lg btn-full"
+          >
+            Kirim Lewat WhatsApp
+          </button>
+
+        </form>
+
+        <p class="contact-note reveal">
+          Rata-rata membalas dalam
+          <strong>1×24 jam</strong>
+          pada hari kerja.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+
+        <a
+          href="#home"
+          class="logo logo--footer"
+        >
+          <span class="logo-mark">
+            F
+          </span>
+
+          <span class="logo-text">
+            fariz.dev
+          </span>
+        </a>
+
+        <p>
+          Web Developer
+        </p>
+
+        <p class="footer-passion">
+          Built with HTML, CSS &amp; JavaScript.
+        </p>
+
+      </div>
+
+      <nav
+        class="footer-nav"
+        aria-label="Navigasi footer"
+      >
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#skills">
+          Skills
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </nav>
+
+      <div
+        class="footer-social"
+        aria-label="Social media"
+      >
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+        >
+          GH
+        </a>
+
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          IG
+        </a>
+
+        <a
+          href="https://linkedin.com/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+        >
+          IN
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+      <small>
+        ©
+        <span id="footerYear">
+          2026
+        </span>
+        Fariz. All rights reserved.
+      </small>
+
+      <small lang="ja">
+        ありがとう —
+        Terima kasih sudah mampir
+      </small>
+
+    </div>
+
+  </footer>
+
+  <!-- ================= PROJECT MODAL ================= -->
+
+  <div
+    class="modal-overlay"
+    id="modalOverlay"
+    hidden
+  >
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      id="modalBox"
+    >
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        aria-label="Tutup detail project"
+      >
+        ✕
+      </button>
+
+      <div
+        class="modal-visual"
+        id="modalVisual"
+        aria-hidden="true"
+      ></div>
+
+      <div class="modal-body">
+
+        <span
+          class="modal-cat"
+          id="modalCat"
+        ></span>
+
+        <h3 id="modalTitle"></h3>
+
+        <p
+          class="modal-desc"
+          id="modalDesc"
+        ></p>
+
+        <div class="modal-grid">
+
+          <div>
+            <h4>Problem</h4>
+            <p id="modalProblem"></p>
+          </div>
+
+          <div>
+            <h4>Solution</h4>
+            <p id="modalSolution"></p>
+          </div>
+
+          <div>
+            <h4>Role</h4>
+            <p id="modalRole"></p>
+          </div>
+
+          <div>
+            <h4>Challenges</h4>
+            <p id="modalChallenges"></p>
+          </div>
+
+        </div>
+
+        <p
+          class="modal-result"
+          id="modalResult"
+        ></p>
+
+        <div
+          class="modal-tech"
+          id="modalTech"
+        ></div>
+
+        <div class="modal-actions">
+
+          <a
+            href="#"
+            class="btn btn-outline btn-sm"
+            id="modalGithub"
+            target="_blank"
+            rel="noopener"
+          >
+            Source Code
+          </a>
+
+          <a
+            href="#"
+            class="btn btn-primary btn-sm"
+            id="modalDemo"
+            target="_blank"
+            rel="noopener"
+          >
+            Live Demo
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Back to top -->
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Kembali ke atas"
+    hidden
+  >
+    ↑
+  </button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
